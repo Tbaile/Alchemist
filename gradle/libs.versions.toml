@@ -18,6 +18,7 @@ react = "18.3.1-pre.808"
 scafi = "1.3.0"
 scala = "2.13.14"
 scalacache = "0.28.0"
+androidx-lifecycle = "2.8.0"
 
 [libraries]
 antlr4 = { module = "org.antlr:antlr4", version.ref = "antlr4" }
@@ -114,6 +115,10 @@ spotbugs-annotations = "com.github.spotbugs:spotbugs-annotations:4.8.6"
 redux-kotlin-threadsafe = "org.reduxkotlin:redux-kotlin-threadsafe:0.6.1"
 svgsalamander = "guru.nidi.com.kitfox:svgSalamander:1.1.3"
 trove4j = "net.sf.trove4j:trove4j:3.0.3"
+androidx-lifecycle-viewmodel = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-runtime-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
+kotlinx-coroutines-swing = "org.jetbrains.kotlinx:kotlinx-coroutines-swing:1.8.1"
+
 
 [bundles]
 graphhopper = [ "graphhopper-core" ]
@@ -163,3 +168,5 @@ scalatest = "com.github.maiflai.scalatest:0.32"
 shadowJar = "com.github.johnrengelman.shadow:8.1.1"
 taskTree = "com.dorongold.task-tree:4.0.0"
 jpackage = "org.panteleyev.jpackageplugin:1.6.0"
+jetbrains-compose = "org.jetbrains.compose:1.6.11"
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
