@@ -7,6 +7,8 @@
  * as described in the file LICENSE in the Alchemist distribution's top directory.
  */
 
+import io.gitlab.arturbosch.detekt.Detekt
+import java.io.File.separator
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
@@ -85,3 +87,8 @@ compose.desktop {
         }
     }
 }
+
+fun PatternFilterable.excludeGenerated() = exclude { "build${separator}generated" in it.file.absolutePath }
+tasks.withType<Detekt>().configureEach { excludeGenerated() }
+ktlint { filter { excludeGenerated() } }
+
