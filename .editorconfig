@@ -1,2 +1,7 @@
+# General rule for Kotlin files
 [*.{kt,kts}]
 indent_size=4
+
+# Do not apply the general rule to generated files
+[**/build/generated/**/*.{kt,kts}]
+indent_size=unset
